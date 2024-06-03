@@ -76,7 +76,6 @@ function SwapResultsLogo() {
 	// Remove random bar of buttons Google thought'd be a good idea to add:
 	RunWhenReady([randRow[0]], function (loadedElement) {
 		document.querySelector(randRow[0]).remove();
-		document.querySelector(randRow[1]).style.height = "57px";
 	});
 
 	if(!isImageSearch) {
