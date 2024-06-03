@@ -5,14 +5,14 @@
  * Main replacement script that handles boilerplate classes
  */
 
-//var logoUrl = "https://upload.wikimedia.org/wikipedia/commons/3/3e/Google_2011_logo.png";
-//var favicon = "https://www.w3schools.com/favicon.ico";
-var logoUrl = browser.runtime.getURL('resources/logo.png');
-var favicon = browser.runtime.getURL('resources/favicon.ico');
+var logoUrl = 'https://raw.githubusercontent.com/koke228666/GOOOOL/chroooooooooome/resources/logo.png';
+var favicon = 'https://raw.githubusercontent.com/koke228666/GOOOOL/chroooooooooome/resources/favicon.ico';
 
 var homepageLogo = [".lnXdpd", ".k1zIA", ".SuUcIb"]; // Homepage logo, its container, and the Doodle share button
 var searchLogo = [".jfN4p", ".TYpZOd"]; // PNG and SVG (respectively) results page logos
 var randRow = [".IUOThf", ".XtQzZd"]; // Classes of actual button div and then the navbar which is left too high
+var doodleLogo = [".glue-header__logo-container"]; // pizda
+
 
 RunWhenReady(["head"], function(loadedElement) {
 	loadedElement.append(Object.assign(document.createElement("link"),{rel:"icon", href:favicon}));
