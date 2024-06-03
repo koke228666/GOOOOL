@@ -1,6 +1,7 @@
 /*
  * CREATED: 2021-10-19
  * AUTHOR: toydotgame
+ * GOOOOL: koke228
  * Main replacement script that handles boilerplate classes
  */
 
