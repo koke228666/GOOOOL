@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>GOOOOL Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .settings-container {
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+        }
+        .setting {
+            margin-bottom: 10px;
+        }
+        button {
+            width: 75px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>GOOOOL Settings</h1>
+    <div class="settings-container">
+        <div class="setting">
+            <input type="checkbox" id="noBear">
+            <label for="noBear">Использовать лого без медведя</label>
+        </div>
+        <div class="setting">
+            <input type="checkbox" id="noFavicon">
+            <label for="noFavicon">Не заменять <a href="https://ru.wikipedia.org/wiki/Favicon">favicon</a></label>
+        </div>
+        <button id="save">Сохранить</button>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>
