@@ -87,13 +87,9 @@ browser.storage.local.get(['noBear', 'noFavicon']).then((result) => {
 
 		if(!isImageSearch) {
 			document.querySelector(searchLogo[0]).src = logoUrl;
+			document.querySelector(searchLogo[0]).height = "33";
 			return;
 		}
-
-		// Image search results logo:
-		document.querySelector(searchLogo[1]).outerHTML = document.querySelector(searchLogo[1]).outerHTML.replace(/svg/g, "img");
-		document.querySelector(searchLogo[1]).height = "30"; // SVG proportions are 34px for some reason so override here
-		document.querySelector(searchLogo[1]).src = logoUrl;
 	}
 
 	/*
