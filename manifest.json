@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "GOOOOL",
-  "version": "6.9",
+  "version": "6.9.1",
   "description": "GOOOOL",
   "icons": {
     "32": "icons/32.png",
@@ -425,6 +425,12 @@
       ],
       "run_at": "document_start"
     }
+  ],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "permissions": [
+    "storage"
   ],
   "content_security_policy": {}
 }
