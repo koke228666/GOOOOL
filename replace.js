@@ -9,10 +9,23 @@
 //var favicon = "https://www.w3schools.com/favicon.ico";
 var logoUrlDefault = browser.runtime.getURL('resources/logo.png');
 var logoUrlNoBear = browser.runtime.getURL('resources/logo_nobear.png');
+var logoUrlGoyda = browser.runtime.getURL('resources/logo_goyda.png');
 var faviconDefault = browser.runtime.getURL('resources/favicon.ico');
 
-browser.storage.local.get(['noBear', 'noFavicon']).then((result) => {
-	var logoUrl = result.noBear ? logoUrlNoBear : logoUrlDefault;
+browser.storage.local.get(['logoChoice', 'noFavicon']).then((result) => {
+	var logoUrl;
+    switch(result.logoChoice) {
+        case 'noBear':
+            logoUrl = logoUrlNoBear;
+            break;
+        case 'goyda':
+            logoUrl = logoUrlGoyda;
+            break;
+        case 'noChange':
+            return;
+        default:
+            logoUrl = logoUrlBear;
+    }
 	var favicon = result.noFavicon ? null : faviconDefault;
 	var homepageLogo = [".lnXdpd", ".k1zIA", ".SuUcIb"]; // Homepage logo, its container, and the Doodle share button
 	var searchLogo = [".jfN4p", ".TYpZOd"]; // PNG and SVG (respectively) results page logos
