@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "GOOOOL",
-  "version": "6.9.2",
+  "version": "6.9.2.1",
   "description": "GOOOOL",
   "icons": {
     "32": "icons/32.png",

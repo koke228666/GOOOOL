@@ -9,8 +9,12 @@
     <h1>GOOOOL Settings</h1>
     <div class="settings-container">
         <div class="setting">
-            <input type="checkbox" id="noBear">
-            <label for="noBear">Использовать лого без медведя</label>
+            <select id="logoChoice">
+                <option value="default">GOOOL (по умолчанию)</option>
+                <option value="noBear">GOOOL без медведя</option>
+                <option value="goyda">Goyda</option>
+                <option value="noChange">Google (оригинал)</option>
+            </select>
         </div>
         <div class="setting">
             <input type="checkbox" id="noFavicon">

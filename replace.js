@@ -7,12 +7,25 @@
 
 //var logoUrl = "https://upload.wikimedia.org/wikipedia/commons/3/3e/Google_2011_logo.png";
 //var favicon = "https://www.w3schools.com/favicon.ico";
-var logoUrlDefault = 'https://raw.githubusercontent.com/koke228666/GOOOOL/chroooooooooome/resources/logo.png';
+var logoUrlBear = 'https://raw.githubusercontent.com/koke228666/GOOOOL/chroooooooooome/resources/logo.png';
 var logoUrlNoBear= 'https://raw.githubusercontent.com/koke228666/GOOOOL/chroooooooooome/resources/logo_nobear.png';
+var logoUrlGoyda = 'https://raw.githubusercontent.com/koke228666/GOOOOL/chroooooooooome/resources/logo_goyda.png';
 var faviconDefault = 'https://raw.githubusercontent.com/koke228666/GOOOOL/chroooooooooome/resources/favicon.ico';
 
-chrome.storage.local.get(['noBear', 'noFavicon']).then((result) => {
-	var logoUrl = result.noBear ? logoUrlNoBear : logoUrlDefault;
+chrome.storage.local.get(['logoChoice', 'noFavicon']).then((result) => {
+    var logoUrl;
+    switch(result.logoChoice) {
+        case 'noBear':
+            logoUrl = logoUrlNoBear;
+            break;
+        case 'goyda':
+            logoUrl = logoUrlGoyda;
+            break;
+        case 'noChange':
+            return;
+        default:
+            logoUrl = logoUrlBear;
+    }
 	var favicon = result.noFavicon ? null : faviconDefault;
 	var homepageLogo = [".lnXdpd", ".k1zIA", ".SuUcIb"]; // Homepage logo, its container, and the Doodle share button
 	var searchLogo = [".jfN4p", ".TYpZOd"]; // PNG and SVG (respectively) results page logos
